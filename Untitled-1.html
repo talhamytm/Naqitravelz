@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ashar & Javaria's Wedding</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600&display=swap');
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        .heading-font {
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1519225421980-715cb0215aed?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+        }
+        
+        .countdown-box {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+        }
+        
+        .event-card {
+            transition: all 0.3s ease;
+        }
+        
+        .event-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .gallery-item {
+            transition: all 0.3s ease;
+        }
+        
+        .gallery-item:hover {
+            transform: scale(1.05);
+        }
+        
+        .rsvp-form input, .rsvp-form textarea {
+            background: rgba(255, 255, 255, 0.8);
+        }
+        
+        .floating-nav {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 100;
+        }
+    </style>
+</head>
+<body class="bg-rose-50 text-gray-800">
+    <!-- Floating Navigation -->
+    <div class="floating-nav">
+        <div class="flex flex-col space-y-2">
+            <a href="#home" class="w-12 h-12 rounded-full bg-rose-600 text-white flex items-center justify-center shadow-lg hover:bg-rose-700 transition">
+                <i class="fas fa-home"></i>
+            </a>
+            <a href="#events" class="w-12 h-12 rounded-full bg-rose-600 text-white flex items-center justify-center shadow-lg hover:bg-rose-700 transition">
+                <i class="fas fa-calendar-alt"></i>
+            </a>
+            <a href="#couple" class="w-12 h-12 rounded-full bg-rose-600 text-white flex items-center justify-center shadow-lg hover:bg-rose-700 transition">
+                <i class="fas fa-heart"></i>
+            </a>
+            <a href="#gallery" class="w-12 h-12 rounded-full bg-rose-600 text-white flex items-center justify-center shadow-lg hover:bg-rose-700 transition">
+                <i class="fas fa-images"></i>
+            </a>
+            <a href="#venue" class="w-12 h-12 rounded-full bg-rose-600 text-white flex items-center justify-center shadow-lg hover:bg-rose-700 transition">
+                <i class="fas fa-map-marker-alt"></i>
+            </a>
+            <a href="#rsvp" class="w-12 h-12 rounded-full bg-rose-600 text-white flex items-center justify-center shadow-lg hover:bg-rose-700 transition">
+                <i class="fas fa-envelope"></i>
+            </a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero flex items-center justify-center text-center text-white relative">
+        <div class="container px-4">
+            <h1 class="heading-font text-5xl md:text-7xl mb-6">Ashar & Javaria</h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-2xl mx-auto">
+                Join us in celebrating our union – a three-day celebration of love, laughter, and happily ever after.
+            </p>
+            <div class="text-2xl mb-8">April 17 - 19, 2025</div>
+            
+            <div class="countdown-box rounded-lg p-4 inline-block">
+                <div class="text-xl mb-2">Counting Down To Our Big Day</div>
+                <div class="flex justify-center space-x-4">
+                    <div class="text-center">
+                        <div id="days" class="text-3xl font-bold">00</div>
+                        <div class="text-sm">Days</div>
+                    </div>
+                    <div class="text-center">
+                        <div id="hours" class="text-3xl font-bold">00</div>
+                        <div class="text-sm">Hours</div>
+                    </div>
+                    <div class="text-center">
+                        <div id="minutes" class="text-3xl font-bold">00</div>
+                        <div class="text-sm">Minutes</div>
+                    </div>
+                    <div class="text-center">
+                        <div id="seconds" class="text-3xl font-bold">00</div>
+                        <div class="text-sm">Seconds</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-12">
+                <a href="#events" class="bg-transparent border-2 border-white text-white px-8 py-3 rounded-full hover:bg-white hover:text-rose-600 transition duration-300 inline-block">
+                    View Events
+                </a>
+            </div>
+        </div>
+        
+        <div class="absolute bottom-10 left-0 right-0 text-center">
+            <a href="#events" class="text-white animate-bounce inline-block">
+                <i class="fas fa-chevron-down text-2xl"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Events Section -->
+    <section id="events" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="heading-font text-4xl text-center mb-16">Wedding Events</h2>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Nikkah + Mehndi -->
+                <div class="event-card bg-rose-50 rounded-lg overflow-hidden shadow-md">
+                    <div class="h-48 bg-rose-200 flex items-center justify-center text-rose-600 text-6xl">
+                        <i class="fas fa-hands-praying"></i>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-rose-600 text-white rounded-full w-10 h-10 flex items-center justify-center mr-3">
+                                <span class="font-bold">17</span>
+                            </div>
+                            <h3 class="heading-font text-2xl">Nikkah & Mehndi</h3>
+                        </div>
+                        <div class="mb-4">
+                            <div class="flex items-center text-rose-600 mb-2">
+                                <i class="fas fa-calendar-day mr-2"></i>
+                                <span>Thursday, April 17, 2025</span>
+                            </div>
+                            <div class="flex items-center text-rose-600 mb-2">
+                                <i class="fas fa-clock mr-2"></i>
+                                <span>5:00 PM onwards</span>
+                            </div>
+                            <div class="flex items-center text-rose-600 mb-2">
+                                <i class="fas fa-map-marker-alt mr-2"></i>
+                                <span>Grand Ballroom, Pearl Continental</span>
+                            </div>
+                            <div class="flex items-center text-rose-600">
+                                <i class="fas fa-tshirt mr-2"></i>
+                                <span>Traditional Formal</span>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 mb-4">
+                            Our sacred union begins with the Nikkah ceremony followed by Mehndi celebrations. Henna artists will be available for guests!
+                        </p>
+                        <div class="text-sm bg-rose-100 text-rose-800 p-2 rounded">
+                            <i class="fas fa-info-circle mr-1"></i> Nikkah ceremony begins promptly at 6PM
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Barat -->
+                <div class="event-card bg-rose-50 rounded-lg overflow-hidden shadow-md">
+                    <div class="h-48 bg-rose-200 flex items-center justify-center text-rose-600 text-6xl">
+                        <i class="fas fa-people-carry"></i>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-rose-600 text-white rounded-full w-10 h-10 flex items-center justify-center mr-3">
+                                <span class="font-bold">18</span>
+                            </div>
+                            <h3 class="heading-font text-2xl">Barat</h3>
+                        </div>
+                        <div class="mb-4">
+                            <div class="flex items-center text-rose-600 mb-2">
+                                <i class="fas fa-calendar-day mr-2"></i>
+                                <span>Friday, April 18, 2025</span>
+                            </div>
+                            <div class="flex items-center text-rose-600 mb-2">
+                                <i class="fas fa-clock mr-2"></i>
+                                <span>7:00 PM onwards</span>
+                            </div>
+                            <div class="flex items-center text-rose-600 mb-2">
+                                <i class="fas fa-map-marker-alt mr-2"></i>
+                                <span>Lawn at Marriott Hotel</span>
+                            </div>
+                            <div class="flex items-center text-rose-600">
+                                <i class="fas fa-tshirt mr-2"></i>
+                                <span>Formal Traditional</span>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 mb-4">
+                            The groom's procession arrives in traditional style with dhol players. Expect dancing, music, and joyful celebrations.
+                        </p>
+                        <div class="text-sm bg-rose-100 text-rose-800 p-2 rounded">
+                            <i class="fas fa-info-circle mr-1"></i> Special performance by famous singer at 9PM
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Walima -->
+                <div class="event-card bg-rose-50 rounded-lg overflow-hidden shadow-md">
+                    <div class="h-48 bg-rose-200 flex items-center justify-center text-rose-600 text-6xl">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-rose-600 text-white rounded-full w-10 h-10 flex items-center justify-center mr-3">
+                                <span class="font-bold">19</span>
+                            </div>
+                            <h3 class="heading-font text-2xl">Walima</h3>
+                        </div>
+                        <div class="mb-4">
+                            <div class="flex items-center text-rose-600 mb-2">
+                                <i class="fas fa-calendar-day mr-2"></i>
+                                <span>Saturday, April 19, 2025</span>
+                            </div>
+                            <div class="flex items-center text-rose-600 mb-2">
+                                <i class="fas fa-clock mr-2"></i>
+                                <span>8:00 PM onwards</span>
+                            </div>
+                            <div class="flex items-center text-rose-600 mb-2">
+                                <i class="fas fa-map-marker-alt mr-2"></i>
+                                <span>Royal Palm Golf & Country Club</span>
+                            </div>
+                            <div class="flex items-center text-rose-600">
+                                <i class="fas fa-tshirt mr-2"></i>
+                                <span>Black Tie Optional</span>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 mb-4">
+                            Our final celebration with a grand reception. We'll have gourmet dining, live music, and unforgettable memories.
+                        </p>
+                        <div class="text-sm bg-rose-100 text-rose-800 p-2 rounded italic">
+                            "We can't wait to celebrate with all of you as we begin our life together!" - Ashar & Javaria
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Couple Story Section -->
+    <section id="couple" class="py-20 bg-rose-50">
+        <div class="container mx-auto px-4">
+            <h2 class="heading-font text-4xl text-center mb-16">Our Story</h2>
+            
+            <div class="flex flex-col md:flex-row items-center mb-16">
+                <div class="md:w-1/2 mb-8 md:mb-0 md:pr-8">
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <h3 class="heading-font text-2xl mb-4 text-rose-600">How We Met</h3>
+                        <p class="mb-4">
+                            "We met? Well... we were born into the same family!"
+
+Yep, plot twist of the century. Never in our wildest dreams did we imagine we’d go from awkward “salam-dua” to shaadi ke phoolon ke beech vows. We were more like background extras in each other’s lives, just a polite nod at weddings, a shared eye-roll over aunties' gossip, and the occasional battle for the last gulab jamun.
+
+But then came Talha’s wedding.
+(Kon Talha? Our cousin, who had absolutely no clue the next wedding he’d be attending would be ours.)
+
+
+                        </p>
+                        <p>
+                            
+Somewhere between loud dhol beats, mehndi madness, and probably a very overcooked kebab, something changed. A glance turned into a spark, a spark into a silent promise, and by the time the rasmalai was served, we both knew...
+"Yeh toh ho gaya hai." ❤️
+
+                        </p>
+                    </div>
+                </div>
+                <div class="md:w-1/2">
+                    <img src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" alt="Couple meeting" class="rounded-lg shadow-md w-full h-auto">
+                </div>
+            </div>
+            
+            <div class="flex flex-col md:flex-row items-center mb-16">
+                <div class="md:w-1/2 order-2 md:order-1 mb-8 md:mb-0">
+                    <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" alt="Proposal" class="rounded-lg shadow-md w-full h-auto">
+                </div>
+                <div class="md:w-1/2 order-1 md:order-2 md:pl-8">
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <h3 class="heading-font text-2xl mb-4 text-rose-600">The Proposal</h3>
+                        <p class="mb-4">
+                            It all started at Talha’s wedding, where Ashar realized something important, he had feelings for Javaria. So, in his typical style, he couldn’t keep it to himself and accidentally let the cat out of the bag. Ashar mentioned to the family that he was interested in marrying her, and before anyone could process it, the word was out!
+
+
+                        </p>
+                        <p>
+                            A few calls later, and the rishta was set in motion. Fast forward, and here we are today, all thanks to one wedding, a little honesty, and a lot of love! ❤️
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-8 md:mb-0 md:pr-8">
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <h3 class="heading-font text-2xl mb-4 text-rose-600">Our Journey</h3>
+                        <p class="mb-4">
+                            From awkward family nods to suddenly being that couple, it all began with a glance and a few laughs. Somehow, we went from “Russian salad fights” to “let’s get married!” Between the jokes, the family drama, and endless conversations, we realized we were meant to be. 
+                        </p>
+                        <p>
+                            And now, here we are, ready to make it official!
+                        </p>
+                    </div>
+                </div>
+                <div class="md:w-1/2">
+                    <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" alt="Couple journey" class="rounded-lg shadow-md w-full h-auto">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="heading-font text-4xl text-center mb-16">Our Gallery</h2>
+            
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                <div class="gallery-item overflow-hidden rounded-lg shadow-md">
+                    <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Gallery image 1" class="w-full h-48 object-cover hover:scale-110 transition duration-500">
+                </div>
+                <div class="gallery-item overflow-hidden rounded-lg shadow-md">
+                    <img src="https://images.unsplash.com/photo-1518621736915-f3b1c41bfd00?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1473&q=80" alt="Gallery image 2" class="w-full h-48 object-cover hover:scale-110 transition duration-500">
+                </div>
+                <div class="gallery-item overflow-hidden rounded-lg shadow-md">
+                    <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" alt="Gallery image 3" class="w-full h-48 object-cover hover:scale-110 transition duration-500">
+                </div>
+                <div class="gallery-item overflow-hidden rounded-lg shadow-md">
+                    <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Gallery image 4" class="w-full h-48 object-cover hover:scale-110 transition duration-500">
+                </div>
+                <div class="gallery-item overflow-hidden rounded-lg shadow-md">
+                    <img src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" alt="Gallery image 5" class="w-full h-48 object-cover hover:scale-110 transition duration-500">
+                </div>
+                <div class="gallery-item overflow-hidden rounded-lg shadow-md">
+                    <img src="https://images.unsplash.com/photo-1518621736915-f3b1c41bfd00?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1473&q=80" alt="Gallery image 6" class="w-full h-48 object-cover hover:scale-110 transition duration-500">
+                </div>
+                <div class="gallery-item overflow-hidden rounded-lg shadow-md">
+                    <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" alt="Gallery image 7" class="w-full h-48 object-cover hover:scale-110 transition duration-500">
+                </div>
+                <div class="gallery-item overflow-hidden rounded-lg shadow-md">
+                    <img src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" alt="Gallery image 8" class="w-full h-48 object-cover hover:scale-110 transition duration-500">
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <button class="bg-rose-600 text-white px-6 py-3 rounded-full hover:bg-rose-700 transition">
+                    View More Photos
+                </button>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- Venue Section -->
+    <section id="venue" class="py-20 bg-rose-50">
+        <div class="container mx-auto px-4">
+            <h2 class="heading-font text-4xl text-center mb-16">Venue & Directions</h2>
+            
+            <div class="grid md:grid-cols-2 gap-8 mb-16">
+                <div>
+                    <h3 class="heading-font text-2xl mb-4 text-rose-600">Nikkah & Mehndi Venue</h3>
+                    <p class="mb-4">
+                        <strong>Grand Ballroom, Pearl Continental</strong><br>
+                        1 Club Road, Karachi, Pakistan
+                    </p>
+                    <div class="aspect-w-16 aspect-h-9">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3620.1782920892!2d67.0282433150006!3d24.861872984051!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33e8d93e9e8a9%3A0x7e1a5dfb1a2f0a3c!2sPearl%20Continental%20Hotel%2C%20Karachi!5e0!3m2!1sen!2s!4v1686745436783!5m2!1sen!2s" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" class="rounded-lg shadow-md"></iframe>
+                    </div>
+                    <div class="mt-4 bg-white p-4 rounded-lg shadow-sm">
+                        <h4 class="font-bold mb-2">Not sure where the party is?</h4>
+                        <p> Follow the trail of excited aunties and cousins pretending to be wedding planners!</p>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="heading-font text-2xl mb-4 text-rose-600">Barat & Walima Venues</h3>
+                    <p class="mb-4">
+                        <strong>Barat:</strong> Lawn at Marriott Hotel<br>
+                        <strong>Walima:</strong> Royal Palm Golf & Country Club
+                    </p>
+                    <div class="aspect-w-16 aspect-h-9">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3620.1782920892!2d67.0282433150006!3d24.861872984051!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33e8d93e9e8a9%3A0x7e1a5dfb1a2f0a3c!2sPearl%20Continental%20Hotel%2C%20Karachi!5e0!3m2!1sen!2s!4v1686745436783!5m2!1sen!2s" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" class="rounded-lg shadow-md"></iframe>
+                    </div>
+                    <div class="mt-4 bg-white p-4 rounded-lg shadow-sm">
+                        <h4 class="font-bold mb-2">Lost in the venue? </h4>
+                        <p>Don’t worry, the food will guide you! Follow your nose for a “smell the food, find your way” strategy.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bg-white p-8 rounded-lg shadow-md max-w-3xl mx-auto">
+                <h3 class="heading-font text-2xl mb-4 text-center text-rose-600">Transportation Options</h3>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div>
+                        <h4 class="font-bold mb-2 flex items-center">
+                            <i class="fas fa-car text-rose-600 mr-2"></i> By Car
+                        </h4>
+                        <p>All venues have ample parking (translation: fight for a spot like it’s Black Friday). Valet service? Well, if you count your cousin who parks like Fast & Furious, then yes fully covered.</p>
+                    </div>
+                    <div>
+                        <h4 class="font-bold mb-2 flex items-center">
+                            <i class="fas fa-taxi text-rose-600 mr-2"></i> Ride Share
+                        </h4>
+                        <p>Use code ASHARJAVARIA2025 for absolutely no discount on Uber or Careem. But hey, pretending you have a promo makes it feel fancy, right?</p>
+                    </div>
+                    <div>
+                        <h4 class="font-bold mb-2 flex items-center">
+                            <i class="fas fa-bus text-rose-600 mr-2"></i> Shuttle Service
+                        </h4>
+                        <p>Complimentary shuttles will be running between… nowhere. This is a wedding, not Coachella. But if you see a Suzuki van with loud dhol beats, hop in, you’re probably heading in the right direction.</p>
+                    </div>
+                    <div>
+                        <h4 class="font-bold mb-2 flex items-center">
+                            <i class="fas fa-plane text-rose-600 mr-2"></i> Airport Transfers
+                        </h4>
+                        <p>Let us know your flight details and we'll arrange airport pickup if needed (and if someone avaialble).</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- RSVP Section -->
+    <section id="rsvp" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="heading-font text-4xl text-center mb-4">RSVP</h2>
+            <p class="text-center text-xl mb-12 max-w-2xl mx-auto">
+                We'd love for you to join us in our celebration!
+            </p>
+            
+            <div class="max-w-2xl mx-auto bg-rose-50 p-8 rounded-lg shadow-md">
+                <form class="rsvp-form">
+                    <div class="grid md:grid-cols-2 gap-6 mb-6">
+                        <div>
+                            <label for="name" class="block mb-2 font-medium">Full Name*</label>
+                            <input type="text" id="name" required class="w-full px-4 py-2 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-rose-500">
+                        </div>
+                        <div>
+                            <label for="email" class="block mb-2 font-medium">Email*</label>
+                            <input type="email" id="email" required class="w-full px-4 py-2 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-rose-500">
+                        </div>
+                    </div>
+                    
+                    <div class="grid md:grid-cols-2 gap-6 mb-6">
+                        <div>
+                            <label for="phone" class="block mb-2 font-medium">Phone Number</label>
+                            <input type="tel" id="phone" class="w-full px-4 py-2 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-rose-500">
+                        </div>
+                        <div>
+                            <label for="guests" class="block mb-2 font-medium">Number of Guests*</label>
+                            <select id="guests" required class="w-full px-4 py-2 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-rose-500">
+                                <option value="">Select</option>
+                                <option value="1">1 (Just Me)</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5+</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <label class="block mb-4 font-medium">Which events will you attend?*</label>
+                        <div class="space-y-2">
+                            <label class="flex items-center">
+                                <input type="checkbox" class="rounded text-rose-600 focus:ring-rose-500 mr-2">
+                                <span>Nikkah & Mehndi - April 17</span>
+                            </label>
+                            <label class="flex items-center">
+                                <input type="checkbox" class="rounded text-rose-600 focus:ring-rose-500 mr-2">
+                                <span>Barat - April 18</span>
+                            </label>
+                            <label class="flex items-center">
+                                <input type="checkbox" class="rounded text-rose-600 focus:ring-rose-500 mr-2">
+                                <span>Walima - April 19</span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <label for="message" class="block mb-2 font-medium">Message for the Couple</label>
+                        <textarea id="message" rows="4" class="w-full px-4 py-2 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-rose-500"></textarea>
+                    </div>
+                    
+                    <div class="text-center">
+                        <button type="submit" class="bg-rose-600 text-white px-8 py-3 rounded-full hover:bg-rose-700 transition">
+                            Submit RSVP
+                        </button>
+                    </div>
+                </form>
+            </div>
+            
+            <div class="max-w-2xl mx-auto mt-16 bg-white p-8 rounded-lg shadow-md">
+                <h3 class="heading-font text-2xl text-center mb-6">Guestbook</h3>
+                
+                <div class="space-y-6 mb-8">
+                    <div class="bg-rose-50 p-4 rounded-lg">
+                        <div class="flex items-center mb-2">
+                            <div class="w-10 h-10 rounded-full bg-rose-200 flex items-center justify-center text-rose-600 mr-3">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold">Talha Niazi</h4>
+                                <div class="text-sm text-gray-500">April 11, 2025</div>
+                            </div>
+                        </div>
+                        <p class="pl-13">Can't wait to celebrate with you both! Wishing you a lifetime of happiness together.</p>
+                    </div>
+                    
+                    <div class="bg-rose-50 p-4 rounded-lg">
+                        <div class="flex items-center mb-2">
+                            <div class="w-10 h-10 rounded-full bg-rose-200 flex items-center justify-center text-rose-600 mr-3">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold">Momina</h4>
+                                <div class="text-sm text-gray-500">April 10, 2025</div>
+                            </div>
+                        </div>
+                        <p class="pl-13">So happy for you two! Looking forward to the celebrations.</p>
+                    </div>
+                </div>
+                
+                <!-- <form>
+                    <div class="mb-4">
+                        <label for="guestbook-name" class="block mb-2 font-medium">Your Name</label>
+                        <input type="text" id="guestbook-name" class="w-full px-4 py-2 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-rose-500">
+                    </div>
+                    <div class="mb-4">
+                        <label for="guestbook-message" class="block mb-2 font-medium">Your Message</label>
+                        <textarea id="guestbook-message" rows="3" class="w-full px-4 py-2 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-rose-500"></textarea>
+                    </div>
+                    <div class="text-right">
+                        <button type="submit" class="bg-rose-600 text-white px-6 py-2 rounded-full hover:bg-rose-700 transition text-sm">
+                            Post Message
+                        </button>
+                    </div>
+                </form> -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-rose-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-8">
+                <h2 class="heading-font text-3xl mb-2">Ashar & Javaria</h2>
+                <p class="text-rose-200">April 17 - 19, 2025</p>
+            </div>
+            
+            <div class="flex justify-center space-x-6 mb-8">
+                <a href="#" class="w-10 h-10 rounded-full bg-rose-800 text-white flex items-center justify-center hover:bg-rose-700 transition">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="#" class="w-10 h-10 rounded-full bg-rose-800 text-white flex items-center justify-center hover:bg-rose-700 transition">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#" class="w-10 h-10 rounded-full bg-rose-800 text-white flex items-center justify-center hover:bg-rose-700 transition">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="#" class="w-10 h-10 rounded-full bg-rose-800 text-white flex items-center justify-center hover:bg-rose-700 transition">
+                    <i class="fab fa-pinterest-p"></i>
+                </a>
+            </div>
+            
+            <div class="text-center text-rose-300 text-sm">
+                <p>Made with <i class="fas fa-heart text-rose-400 mx-1"></i> for our loved ones</p>
+                <p class="mt-2">© 2025 Ashar & Javaria's Wedding. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Countdown Timer
+        function updateCountdown() {
+            const weddingDate = new Date("April 17, 2025 17:00:00").getTime();
+            const now = new Date().getTime();
+            const distance = weddingDate - now;
+            
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            
+            document.getElementById("days").innerHTML = days.toString().padStart(2, "0");
+            document.getElementById("hours").innerHTML = hours.toString().padStart(2, "0");
+            document.getElementById("minutes").innerHTML = minutes.toString().padStart(2, "0");
+            document.getElementById("seconds").innerHTML = seconds.toString().padStart(2, "0");
+        }
+        
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+        
+        // Form submission
+        document.querySelector('.rsvp-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your RSVP! We look forward to celebrating with you.');
+            this.reset();
+        });
+        
+        // Smooth scrolling for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+    <!-- Toast Message Container -->
+<div id="toast" class="fixed bottom-6 left-1/2 transform -translate-x-1/2 bg-rose-600 text-white px-6 py-3 rounded-full shadow-lg opacity-0 transition-opacity duration-500 z-50">
+    Oops! That's all we've got, no more photos for you 😂📸
+</div>
+
+<script>
+    const toast = document.getElementById('toast');
+    const viewMoreBtn = document.querySelector('button');
+
+    viewMoreBtn.addEventListener('click', () => {
+        toast.classList.remove('opacity-0');
+        toast.classList.add('opacity-100');
+
+        setTimeout(() => {
+            toast.classList.remove('opacity-100');
+            toast.classList.add('opacity-0');
+        }, 3000); // Toast disappears after 3 seconds
+    });
+</script>
+
+</body>
+</html>
