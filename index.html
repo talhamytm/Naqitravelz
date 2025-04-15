@@ -217,5 +217,13 @@
     setInterval(updateCountdown, 1000);
     updateCountdown();
   </script>
+  <script>
+    // Scroll to top on initial load
+    window.onload = function() {
+      window.scrollTo(0, 0);
+      history.replaceState(null, null, ' '); // remove #events from URL if present
+    }
+  </script>
+  
 </body>
 </html>
