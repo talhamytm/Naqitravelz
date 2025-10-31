@@ -352,13 +352,19 @@
 
         .detail-item {
             margin: 10px 0;
-            font-size: 18px;
-            color: #333;
+            font-size: 19px;
+            color: #444;
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 600;
         }
 
         .detail-label {
-            color: #c9a961;
+            background: linear-gradient(135deg, #d4af37 0%, #c9a961 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
             font-weight: bold;
+            font-family: 'Playfair Display', serif;
         }
 
         .honored-text {
@@ -366,17 +372,19 @@
             font-style: italic;
             color: #666;
             margin: 30px 0;
-            font-size: 16px;
+            font-size: 17px;
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 600;
         }
 
         .map-btn {
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            background: #4285f4;
+            background: linear-gradient(135deg, #4285f4 0%, #3367d6 100%);
             color: white;
             padding: 12px 30px;
-            border-radius: 25px;
+            border-radius: 30px;
             text-decoration: none;
             font-size: 16px;
             transition: all 0.3s;
@@ -385,12 +393,16 @@
             margin: 20px auto;
             display: flex;
             width: fit-content;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            box-shadow: 0 4px 15px rgba(66, 133, 244, 0.3);
+            letter-spacing: 0.5px;
         }
 
         .map-btn:hover {
-            background: #3367d6;
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(66, 133, 244, 0.3);
+            background: linear-gradient(135deg, #3367d6 0%, #2851a3 100%);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(66, 133, 244, 0.4);
         }
 
         .watermark {
@@ -399,10 +411,15 @@
             left: 50%;
             transform: translate(-50%, -50%) rotate(-45deg);
             font-size: 120px;
-            color: rgba(201, 169, 97, 0.05);
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.08) 0%, rgba(201, 169, 97, 0.08) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
             font-weight: bold;
             pointer-events: none;
             white-space: nowrap;
+            font-family: 'Playfair Display', serif;
+            letter-spacing: 10px;
         }
 
         @media (max-width: 600px) {
@@ -412,11 +429,12 @@
             }
 
             .title {
-                font-size: 28px;
+                font-size: 32px;
+                letter-spacing: 2px;
             }
 
             .groom-name {
-                font-size: 36px;
+                font-size: 42px;
             }
 
             .bismillah {
