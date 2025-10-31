@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Walima Invitation - Husnain Sardar</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Great+Vibes&family=Playfair+Display:wght@400;700;900&family=Montserrat:wght@300;400;600&display=swap');
+
         * {
             margin: 0;
             padding: 0;
@@ -12,8 +14,8 @@
         }
 
         body {
-            font-family: 'Georgia', serif;
-            background: linear-gradient(135deg, #f5e6d3 0%, #d4c5b0 100%);
+            font-family: 'Cormorant Garamond', serif;
+            background: linear-gradient(135deg, #f5e6d3 0%, #e8d5b7 50%, #d4c5b0 100%);
             min-height: 100vh;
             display: flex;
             justify-content: center;
@@ -21,6 +23,12 @@
             padding: 10px;
             position: relative;
             overflow: hidden;
+            animation: backgroundShift 15s ease infinite;
+        }
+
+        @keyframes backgroundShift {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
         }
 
         body::before {
@@ -31,23 +39,39 @@
             right: 0;
             bottom: 0;
             background-image: 
-                radial-gradient(circle at 20% 30%, rgba(218, 165, 32, 0.1) 0%, transparent 50%),
-                radial-gradient(circle at 80% 70%, rgba(184, 134, 11, 0.1) 0%, transparent 50%);
+                radial-gradient(circle at 20% 30%, rgba(218, 165, 32, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 70%, rgba(184, 134, 11, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 50% 50%, rgba(255, 215, 0, 0.1) 0%, transparent 60%);
+            animation: pulse 8s ease-in-out infinite;
             pointer-events: none;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
         }
 
         .container {
             max-width: 800px;
             width: 100%;
             max-height: 95vh;
-            background: linear-gradient(to bottom, #fffef9 0%, #f9f6ed 100%);
+            background: linear-gradient(to bottom, #fffef9 0%, #fff8e7 50%, #f9f6ed 100%);
             border: 3px solid #c9a961;
             border-radius: 20px;
             padding: 40px 30px;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+            box-shadow: 
+                0 20px 60px rgba(0, 0, 0, 0.2),
+                inset 0 1px 0 rgba(255, 255, 255, 0.8),
+                0 0 0 1px rgba(201, 169, 97, 0.3);
             position: relative;
             overflow-y: auto;
             overflow-x: hidden;
+            animation: containerGlow 3s ease-in-out infinite;
+        }
+
+        @keyframes containerGlow {
+            0%, 100% { box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.8), 0 0 0 1px rgba(201, 169, 97, 0.3); }
+            50% { box-shadow: 0 20px 60px rgba(201, 169, 97, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.8), 0 0 0 1px rgba(201, 169, 97, 0.5); }
         }
 
         .container::-webkit-scrollbar {
@@ -69,6 +93,35 @@
             width: 80px;
             height: 80px;
             border: 2px solid #c9a961;
+            opacity: 0.7;
+        }
+
+        .corner-design::before {
+            content: '❋';
+            position: absolute;
+            color: #c9a961;
+            font-size: 20px;
+            opacity: 0.6;
+        }
+
+        .corner-design.top-left::before {
+            top: -10px;
+            left: -10px;
+        }
+
+        .corner-design.top-right::before {
+            top: -10px;
+            right: -10px;
+        }
+
+        .corner-design.bottom-left::before {
+            bottom: -10px;
+            left: -10px;
+        }
+
+        .corner-design.bottom-right::before {
+            bottom: -10px;
+            right: -10px;
         }
 
         .corner-design.top-left {
@@ -116,7 +169,7 @@
         }
 
         .lang-btn {
-            background: #c9a961;
+            background: linear-gradient(135deg, #d4af37 0%, #c9a961 100%);
             color: white;
             border: none;
             padding: 8px 12px;
@@ -125,33 +178,57 @@
             font-size: 12px;
             transition: all 0.3s;
             font-weight: 600;
+            font-family: 'Montserrat', sans-serif;
+            box-shadow: 0 2px 8px rgba(201, 169, 97, 0.3);
+            letter-spacing: 0.5px;
         }
 
         .lang-btn:hover {
-            background: #b8922e;
+            background: linear-gradient(135deg, #b8922e 0%, #a68943 100%);
             transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(201, 169, 97, 0.4);
         }
 
         .lang-btn.active {
-            background: #8b6914;
+            background: linear-gradient(135deg, #8b6914 0%, #6d5411 100%);
+            box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
         }
 
         .bismillah {
             text-align: center;
-            color: #c9a961;
-            font-size: 20px;
+            background: linear-gradient(135deg, #d4af37 0%, #c9a961 50%, #b8922e 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-size: 22px;
             margin-bottom: 30px;
             font-weight: bold;
             margin-top: 20px;
             padding: 0 10px;
+            font-family: 'Playfair Display', serif;
+            letter-spacing: 1px;
+            text-shadow: 0 2px 10px rgba(201, 169, 97, 0.3);
         }
 
         .title {
             text-align: center;
-            color: #c9a961;
-            font-size: 36px;
+            background: linear-gradient(135deg, #d4af37 0%, #c9a961 50%, #b8922e 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-size: 42px;
             margin-bottom: 20px;
-            font-weight: bold;
+            font-weight: 900;
+            font-family: 'Playfair Display', serif;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            position: relative;
+            animation: titleShine 3s ease-in-out infinite;
+        }
+
+        @keyframes titleShine {
+            0%, 100% { filter: brightness(1); }
+            50% { filter: brightness(1.2); }
         }
 
         .divider {
@@ -164,39 +241,63 @@
         .divider::before,
         .divider::after {
             content: '';
-            height: 1px;
+            height: 2px;
             width: 60px;
-            background: #c9a961;
+            background: linear-gradient(90deg, transparent, #c9a961, transparent);
         }
 
         .divider-dot {
-            width: 8px;
-            height: 8px;
-            background: #c9a961;
+            width: 10px;
+            height: 10px;
+            background: radial-gradient(circle, #d4af37 0%, #c9a961 100%);
             border-radius: 50%;
             margin: 0 15px;
+            box-shadow: 0 0 10px rgba(201, 169, 97, 0.5);
+            animation: dotPulse 2s ease-in-out infinite;
+        }
+
+        @keyframes dotPulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.2); }
         }
 
         .grace-text {
             text-align: center;
-            color: #333;
-            font-size: 16px;
+            color: #555;
+            font-size: 17px;
             margin-bottom: 15px;
+            font-family: 'Cormorant Garamond', serif;
+            font-style: italic;
+            font-weight: 600;
         }
 
         .invitation-text {
             text-align: center;
-            color: #333;
-            font-size: 16px;
+            color: #444;
+            font-size: 17px;
             margin-bottom: 30px;
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 600;
         }
 
         .groom-name {
             text-align: center;
-            color: #c9a961;
-            font-size: 48px;
+            font-family: 'Great Vibes', cursive;
+            background: linear-gradient(135deg, #d4af37 0%, #c9a961 50%, #b8922e 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-size: 56px;
             margin: 30px 0;
-            font-weight: bold;
+            font-weight: 400;
+            letter-spacing: 2px;
+            filter: drop-shadow(0 2px 8px rgba(201, 169, 97, 0.3));
+            animation: nameFloat 4s ease-in-out infinite;
+        }
+
+        @keyframes nameFloat {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-5px); }
         }
 
         .countdown {
@@ -209,24 +310,39 @@
 
         .countdown-item {
             text-align: center;
-            background: rgba(201, 169, 97, 0.1);
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.15) 0%, rgba(201, 169, 97, 0.15) 100%);
             padding: 15px 20px;
-            border-radius: 10px;
+            border-radius: 15px;
             min-width: 70px;
+            border: 2px solid rgba(201, 169, 97, 0.3);
+            box-shadow: 0 4px 15px rgba(201, 169, 97, 0.2);
+            transition: all 0.3s;
+        }
+
+        .countdown-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(201, 169, 97, 0.3);
         }
 
         .countdown-value {
-            font-size: 32px;
+            font-size: 36px;
             font-weight: bold;
-            color: #c9a961;
+            background: linear-gradient(135deg, #d4af37 0%, #c9a961 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
             display: block;
+            font-family: 'Playfair Display', serif;
         }
 
         .countdown-label {
             font-size: 12px;
-            color: #666;
+            color: #888;
             text-transform: uppercase;
             margin-top: 5px;
+            font-family: 'Montserrat', sans-serif;
+            letter-spacing: 1px;
+            font-weight: 600;
         }
 
         .details {
