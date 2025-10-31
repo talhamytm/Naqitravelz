@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Husnain & Zunaira - Wedding Celebration</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;900&family=Cormorant+Garamond:wght@300;400;600;700&family=Montserrat:wght@300;400;500;600&family=Noto+Nastaliq+Urdu:wght@400;700&display=swap" rel="stylesheet">
+    <title>Walima Invitation - Husnain Sardar</title>
     <style>
         * {
             margin: 0;
@@ -13,1085 +12,514 @@
         }
 
         body {
-            font-family: 'Montserrat', sans-serif;
-            overflow-x: hidden;
-            background: #0a0a0a;
-            color: #333;
-        }
-
-        .language-toggle {
-            position: fixed;
-            top: 30px;
-            right: 30px;
-            z-index: 1000;
-            background: linear-gradient(135deg, #d4af37, #f4e4c1);
-            padding: 12px 28px;
-            border-radius: 50px;
-            cursor: pointer;
-            font-weight: 600;
-            color: #1a1a1a;
-            box-shadow: 0 8px 25px rgba(212, 175, 55, 0.4);
-            transition: all 0.4s ease;
-            border: 2px solid rgba(255, 255, 255, 0.3);
-        }
-
-        .language-toggle:hover {
-            transform: translateY(-3px) scale(1.05);
-            box-shadow: 0 12px 35px rgba(212, 175, 55, 0.6);
-        }
-
-        /* Hero Section */
-        .hero-section {
+            font-family: 'Georgia', serif;
+            background: linear-gradient(135deg, #f5e6d3 0%, #d4c5b0 100%);
             min-height: 100vh;
             display: flex;
-            flex-direction: column;
             justify-content: center;
             align-items: center;
-            text-align: center;
+            padding: 20px;
             position: relative;
-            overflow: hidden;
-            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
-            padding: 40px 20px;
+            overflow-x: hidden;
         }
 
-        .hero-background {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            background: 
-                radial-gradient(circle at 20% 50%, rgba(212, 175, 55, 0.1) 0%, transparent 50%),
-                radial-gradient(circle at 80% 50%, rgba(244, 228, 193, 0.1) 0%, transparent 50%);
-            animation: backgroundPulse 8s ease-in-out infinite;
-        }
-
-        @keyframes backgroundPulse {
-            0%, 100% { opacity: 0.5; }
-            50% { opacity: 1; }
-        }
-
-        .gold-particles {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-        }
-
-        .particle {
-            position: absolute;
-            background: linear-gradient(135deg, #d4af37, #f4e4c1);
-            border-radius: 50%;
-            animation: particleFloat 20s infinite ease-in-out;
-            opacity: 0;
-        }
-
-        @keyframes particleFloat {
-            0% {
-                transform: translateY(100vh) scale(0);
-                opacity: 0;
-            }
-            10% {
-                opacity: 0.8;
-            }
-            90% {
-                opacity: 0.8;
-            }
-            100% {
-                transform: translateY(-100vh) scale(1);
-                opacity: 0;
-            }
-        }
-
-        .hero-content {
-            z-index: 2;
-            animation: fadeInUp 2s ease;
-            max-width: 1200px;
-            padding: 0 20px;
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(50px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .ornament-divider {
-            width: 200px;
-            height: 2px;
-            background: linear-gradient(90deg, transparent, #d4af37, transparent);
-            margin: 30px auto;
-            position: relative;
-        }
-
-        .ornament-divider::before {
-            content: '◆';
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-            color: #d4af37;
-            font-size: 1.5rem;
-            top: -12px;
-        }
-
-        .wedding-title {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 1.4rem;
-            font-weight: 400;
-            margin-bottom: 20px;
-            letter-spacing: 6px;
-            text-transform: uppercase;
-            color: #d4af37;
-        }
-
-        .couple-names {
-            font-family: 'Playfair Display', serif;
-            font-size: 6.5rem;
-            font-weight: 700;
-            margin: 40px 0;
-            line-height: 1.1;
-            background: linear-gradient(135deg, #ffffff, #d4af37, #ffffff);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            text-shadow: 0 0 40px rgba(212, 175, 55, 0.3);
-            letter-spacing: 5px;
-        }
-
-        .ampersand {
-            font-size: 4rem;
-            font-weight: 300;
-            margin: 0 30px;
-            opacity: 0.9;
-            font-style: italic;
-        }
-
-        .tagline {
-            font-size: 1.3rem;
-            font-weight: 300;
-            letter-spacing: 4px;
-            margin-top: 30px;
-            color: #f4e4c1;
-            text-transform: uppercase;
-        }
-
-        /* Events Section */
-        .events-section {
-            min-height: 100vh;
-            padding: 120px 20px;
-            background: linear-gradient(180deg, #f5f5f5 0%, #ffffff 100%);
-            position: relative;
-        }
-
-        .events-section::before {
+        body::before {
             content: '';
             position: absolute;
             top: 0;
             left: 0;
             right: 0;
-            height: 150px;
-            background: linear-gradient(180deg, #0f3460 0%, transparent 100%);
+            bottom: 0;
+            background-image: 
+                radial-gradient(circle at 20% 30%, rgba(218, 165, 32, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 70%, rgba(184, 134, 11, 0.1) 0%, transparent 50%);
+            pointer-events: none;
         }
 
         .container {
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-
-        .section-title {
-            font-family: 'Playfair Display', serif;
-            font-size: 4.5rem;
-            text-align: center;
-            background: linear-gradient(135deg, #1a1a2e, #d4af37);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            margin-bottom: 20px;
-            font-weight: 700;
-            letter-spacing: 3px;
-        }
-
-        .section-subtitle {
-            text-align: center;
-            color: #666;
-            font-size: 1.1rem;
-            letter-spacing: 2px;
-            margin-bottom: 80px;
-            font-weight: 300;
-        }
-
-        .events-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 50px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .event-card {
-            background: #ffffff;
-            border-radius: 25px;
-            overflow: hidden;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
-            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-            position: relative;
-            border: 1px solid rgba(212, 175, 55, 0.1);
-        }
-
-        .event-card:hover {
-            transform: translateY(-15px);
-            box-shadow: 0 30px 80px rgba(212, 175, 55, 0.25);
-            border-color: rgba(212, 175, 55, 0.3);
-        }
-
-        .event-card-header {
-            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-            padding: 50px 30px;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .event-card-header::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle, rgba(212, 175, 55, 0.15) 0%, transparent 70%);
-            animation: shimmer 4s infinite linear;
-        }
-
-        @keyframes shimmer {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-
-        .event-icon {
-            font-size: 4.5rem;
-            margin-bottom: 20px;
-            filter: drop-shadow(0 5px 15px rgba(212, 175, 55, 0.5));
-            position: relative;
-            z-index: 2;
-        }
-
-        .event-name {
-            font-family: 'Playfair Display', serif;
-            font-size: 2.8rem;
-            font-weight: 700;
-            color: #d4af37;
-            margin-bottom: 10px;
-            position: relative;
-            z-index: 2;
-        }
-
-        .event-card-body {
+            max-width: 800px;
+            width: 100%;
+            background: linear-gradient(to bottom, #fffef9 0%, #f9f6ed 100%);
+            border: 3px solid #c9a961;
+            border-radius: 20px;
             padding: 40px 30px;
-            text-align: center;
-            background: linear-gradient(180deg, #ffffff 0%, #fafafa 100%);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+            position: relative;
+            overflow: hidden;
         }
 
-        .event-detail-row {
+        .corner-design {
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            border: 2px solid #c9a961;
+        }
+
+        .corner-design.top-left {
+            top: 20px;
+            left: 20px;
+            border-right: none;
+            border-bottom: none;
+            border-radius: 15px 0 0 0;
+        }
+
+        .corner-design.top-right {
+            top: 20px;
+            right: 20px;
+            border-left: none;
+            border-bottom: none;
+            border-radius: 0 15px 0 0;
+        }
+
+        .corner-design.bottom-left {
+            bottom: 20px;
+            left: 20px;
+            border-right: none;
+            border-top: none;
+            border-radius: 0 0 0 15px;
+        }
+
+        .corner-design.bottom-right {
+            bottom: 20px;
+            right: 20px;
+            border-left: none;
+            border-top: none;
+            border-radius: 0 0 15px 0;
+        }
+
+        .lang-selector {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            display: flex;
+            gap: 8px;
+            z-index: 10;
+        }
+
+        .lang-btn {
+            background: #c9a961;
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 12px;
+            transition: all 0.3s;
+            font-weight: 600;
+        }
+
+        .lang-btn:hover {
+            background: #b8922e;
+            transform: translateY(-2px);
+        }
+
+        .lang-btn.active {
+            background: #8b6914;
+        }
+
+        .bismillah {
+            text-align: center;
+            color: #c9a961;
+            font-size: 20px;
+            margin-bottom: 30px;
+            font-weight: bold;
+        }
+
+        .title {
+            text-align: center;
+            color: #c9a961;
+            font-size: 36px;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .divider {
             display: flex;
             align-items: center;
             justify-content: center;
             margin: 20px 0;
-            font-size: 1.15rem;
-            color: #555;
         }
 
-        .event-detail-label {
-            font-weight: 600;
-            color: #d4af37;
-            margin-right: 10px;
-            min-width: 80px;
-            text-align: right;
-        }
-
-        .event-detail-value {
-            font-weight: 400;
-            color: #333;
-        }
-
-        .event-card-footer {
-            padding: 20px 30px;
-            background: linear-gradient(135deg, rgba(212, 175, 55, 0.05), rgba(212, 175, 55, 0.1));
-            border-top: 2px solid rgba(212, 175, 55, 0.2);
-        }
-
-        .event-decoration {
+        .divider::before,
+        .divider::after {
+            content: '';
+            height: 1px;
             width: 60px;
-            height: 2px;
-            background: linear-gradient(90deg, transparent, #d4af37, transparent);
-            margin: 0 auto;
+            background: #c9a961;
         }
 
-        /* Map Section */
-        .map-section {
-            padding: 120px 20px;
-            background: linear-gradient(180deg, #ffffff 0%, #f5f5f5 100%);
+        .divider-dot {
+            width: 8px;
+            height: 8px;
+            background: #c9a961;
+            border-radius: 50%;
+            margin: 0 15px;
         }
 
-        .map-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            background: #ffffff;
-            padding: 60px;
-            border-radius: 30px;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
-            border: 2px solid rgba(212, 175, 55, 0.2);
-        }
-
-        .map-title {
-            font-family: 'Playfair Display', serif;
-            font-size: 3.5rem;
+        .grace-text {
             text-align: center;
-            background: linear-gradient(135deg, #1a1a2e, #d4af37);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            color: #333;
+            font-size: 16px;
             margin-bottom: 15px;
-            font-weight: 700;
         }
 
-        .map-subtitle {
+        .invitation-text {
             text-align: center;
-            color: #666;
-            font-size: 1.1rem;
-            margin-bottom: 50px;
-            font-weight: 300;
-        }
-
-        .map-frame {
-            width: 100%;
-            height: 500px;
-            border-radius: 20px;
-            border: 3px solid rgba(212, 175, 55, 0.2);
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+            color: #333;
+            font-size: 16px;
             margin-bottom: 30px;
         }
 
-        .map-link-button {
-            display: inline-block;
-            margin: 20px auto 0;
-            padding: 18px 50px;
-            background: linear-gradient(135deg, #d4af37, #f4e4c1);
-            color: #1a1a1a;
-            text-decoration: none;
-            border-radius: 50px;
-            font-weight: 600;
-            font-size: 1.1rem;
-            letter-spacing: 1px;
-            box-shadow: 0 8px 25px rgba(212, 175, 55, 0.4);
-            transition: all 0.4s ease;
+        .groom-name {
             text-align: center;
+            color: #c9a961;
+            font-size: 48px;
+            margin: 30px 0;
+            font-weight: bold;
+        }
+
+        .countdown {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 30px 0;
+            flex-wrap: wrap;
+        }
+
+        .countdown-item {
+            text-align: center;
+            background: rgba(201, 169, 97, 0.1);
+            padding: 15px 20px;
+            border-radius: 10px;
+            min-width: 70px;
+        }
+
+        .countdown-value {
+            font-size: 32px;
+            font-weight: bold;
+            color: #c9a961;
             display: block;
-            max-width: 300px;
-            margin-left: auto;
-            margin-right: auto;
         }
 
-        .map-link-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 12px 35px rgba(212, 175, 55, 0.6);
-            background: linear-gradient(135deg, #f4e4c1, #d4af37);
+        .countdown-label {
+            font-size: 12px;
+            color: #666;
+            text-transform: uppercase;
+            margin-top: 5px;
         }
 
-        /* Footer */
-        .footer {
-            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
-            color: white;
+        .details {
             text-align: center;
-            padding: 100px 20px;
-            position: relative;
-            overflow: hidden;
+            margin: 30px 0;
         }
 
-        .footer::before {
-            content: '';
+        .detail-item {
+            margin: 10px 0;
+            font-size: 18px;
+            color: #333;
+        }
+
+        .detail-label {
+            color: #c9a961;
+            font-weight: bold;
+        }
+
+        .honored-text {
+            text-align: center;
+            font-style: italic;
+            color: #666;
+            margin: 30px 0;
+            font-size: 16px;
+        }
+
+        .map-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #4285f4;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-size: 16px;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+            margin: 20px auto;
+            display: flex;
+            width: fit-content;
+        }
+
+        .map-btn:hover {
+            background: #3367d6;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(66, 133, 244, 0.3);
+        }
+
+        .watermark {
             position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 100%;
-            background: 
-                radial-gradient(circle at 30% 50%, rgba(212, 175, 55, 0.1) 0%, transparent 50%),
-                radial-gradient(circle at 70% 50%, rgba(244, 228, 193, 0.1) 0%, transparent 50%);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(-45deg);
+            font-size: 120px;
+            color: rgba(201, 169, 97, 0.05);
+            font-weight: bold;
+            pointer-events: none;
+            white-space: nowrap;
         }
 
-        .footer-content {
-            position: relative;
-            z-index: 2;
-        }
-
-        .footer-message {
-            font-family: 'Playfair Display', serif;
-            font-size: 3rem;
-            margin-bottom: 25px;
-            color: #d4af37;
-            font-weight: 600;
-        }
-
-        .footer-text {
-            font-size: 1.2rem;
-            opacity: 0.9;
-            color: #f4e4c1;
-            font-weight: 300;
-            letter-spacing: 1px;
-        }
-
-        .hidden {
-            display: none !important;
-        }
-
-        /* Urdu Specific Styles */
-        .urdu-text {
-            font-family: 'Noto Nastaliq Urdu', serif;
-            direction: rtl;
-            text-align: right;
-        }
-
-        .urdu-title {
-            font-size: 2rem;
-        }
-
-        .urdu-names {
-            font-size: 5rem;
-            direction: rtl;
-        }
-
-        .urdu-tagline {
-            font-size: 1.8rem;
-        }
-
-        .urdu-section-title {
-            font-size: 4rem;
-        }
-
-        .urdu-subtitle {
-            font-size: 1.4rem;
-        }
-
-        .urdu-event-name {
-            font-size: 2.5rem;
-        }
-
-        .urdu-event-detail {
-            font-size: 1.3rem;
-            direction: rtl;
-        }
-
-        .urdu-map-title {
-            font-size: 3rem;
-        }
-
-        .urdu-map-subtitle {
-            font-size: 1.4rem;
-        }
-
-        .urdu-footer-message {
-            font-size: 2.8rem;
-        }
-
-        .urdu-footer-text {
-            font-size: 1.3rem;
-        }
-
-        @media (max-width: 768px) {
-            .language-toggle {
-                top: 15px;
-                right: 15px;
-                padding: 10px 20px;
-                font-size: 0.9rem;
-            }
-
-            .hero-section {
-                padding: 60px 15px;
-                min-height: 90vh;
-            }
-
-            .couple-names {
-                font-size: 2.8rem;
-                letter-spacing: 2px;
-                margin: 25px 0;
-            }
-
-            .urdu-names {
-                font-size: 2.5rem;
-                margin: 25px 0;
-            }
-
-            .ampersand {
-                font-size: 2rem;
-                margin: 0 15px;
-            }
-
-            .wedding-title {
-                font-size: 1rem;
-                letter-spacing: 3px;
-            }
-
-            .urdu-title {
-                font-size: 1.4rem;
-            }
-
-            .tagline {
-                font-size: 0.9rem;
-                letter-spacing: 2px;
-            }
-
-            .urdu-tagline {
-                font-size: 1.2rem;
-            }
-
-            .ornament-divider {
-                width: 120px;
-                margin: 20px auto;
-            }
-
-            .events-section {
-                padding: 60px 15px;
-            }
-
-            .section-title {
-                font-size: 2.5rem;
-                margin-bottom: 10px;
-            }
-
-            .urdu-section-title {
-                font-size: 2.2rem;
-            }
-
-            .section-subtitle {
-                font-size: 0.9rem;
-                letter-spacing: 1px;
-                margin-bottom: 40px;
-            }
-
-            .urdu-subtitle {
-                font-size: 1.1rem;
-            }
-
-            .events-grid {
-                grid-template-columns: 1fr;
-                gap: 30px;
-            }
-
-            .event-card {
-                border-radius: 20px;
-            }
-
-            .event-card-header {
-                padding: 35px 20px;
-            }
-
-            .event-icon {
-                font-size: 3.5rem;
-                margin-bottom: 15px;
-            }
-
-            .event-name {
-                font-size: 2.2rem;
-            }
-
-            .urdu-event-name {
-                font-size: 2rem;
-            }
-
-            .event-card-body {
+        @media (max-width: 600px) {
+            .container {
                 padding: 30px 20px;
             }
 
-            .event-detail-row {
-                font-size: 1rem;
-                margin: 15px 0;
-                flex-wrap: wrap;
-                text-align: center;
+            .title {
+                font-size: 28px;
             }
 
-            .event-detail-label {
-                min-width: 70px;
-                font-size: 1rem;
+            .groom-name {
+                font-size: 36px;
             }
 
-            .event-detail-value {
-                font-size: 1rem;
+            .bismillah {
+                font-size: 16px;
             }
 
-            .urdu-event-detail {
-                font-size: 1.2rem;
+            .lang-btn {
+                padding: 6px 10px;
+                font-size: 11px;
             }
 
-            .map-section {
-                padding: 60px 15px;
+            .countdown-item {
+                padding: 12px 15px;
+                min-width: 60px;
             }
 
-            .map-container {
-                padding: 25px 15px;
-                border-radius: 20px;
+            .countdown-value {
+                font-size: 24px;
             }
 
-            .map-title {
-                font-size: 2.5rem;
-                margin-bottom: 10px;
+            .detail-item {
+                font-size: 16px;
             }
 
-            .urdu-map-title {
-                font-size: 2.2rem;
+            .corner-design {
+                width: 60px;
+                height: 60px;
             }
 
-            .map-subtitle {
-                font-size: 0.95rem;
-                margin-bottom: 30px;
-            }
-
-            .urdu-map-subtitle {
-                font-size: 1.2rem;
-            }
-
-            .map-frame {
-                height: 300px;
-                border-radius: 15px;
-            }
-
-            .map-link-button {
-                padding: 15px 35px;
-                font-size: 1rem;
-                max-width: 280px;
-            }
-
-            .footer {
-                padding: 60px 20px;
-            }
-
-            .footer-message {
-                font-size: 2rem;
-                margin-bottom: 20px;
-            }
-
-            .urdu-footer-message {
-                font-size: 1.8rem;
-            }
-
-            .footer-text {
-                font-size: 1rem;
-            }
-
-            .urdu-footer-text {
-                font-size: 1.1rem;
+            .watermark {
+                font-size: 80px;
             }
         }
 
-        @media (max-width: 480px) {
-            .couple-names {
-                font-size: 2.2rem;
-                letter-spacing: 1px;
-            }
+        .content {
+            display: none;
+        }
 
-            .urdu-names {
-                font-size: 2rem;
-            }
-
-            .ampersand {
-                font-size: 1.5rem;
-                margin: 0 10px;
-            }
-
-            .wedding-title {
-                font-size: 0.85rem;
-                letter-spacing: 2px;
-            }
-
-            .urdu-title {
-                font-size: 1.2rem;
-            }
-
-            .tagline {
-                font-size: 0.8rem;
-                letter-spacing: 1px;
-            }
-
-            .urdu-tagline {
-                font-size: 1rem;
-            }
-
-            .section-title {
-                font-size: 2rem;
-            }
-
-            .urdu-section-title {
-                font-size: 1.8rem;
-            }
-
-            .event-name {
-                font-size: 1.8rem;
-            }
-
-            .urdu-event-name {
-                font-size: 1.6rem;
-            }
-
-            .event-icon {
-                font-size: 3rem;
-            }
-
-            .map-title {
-                font-size: 2rem;
-            }
-
-            .urdu-map-title {
-                font-size: 1.8rem;
-            }
-
-            .footer-message {
-                font-size: 1.6rem;
-            }
-
-            .urdu-footer-message {
-                font-size: 1.5rem;
-            }
+        .content.active {
+            display: block;
         }
     </style>
 </head>
 <body>
-    <div class="language-toggle" onclick="toggleLanguage()">
-        <span id="langBtn">اردو</span>
+    <div class="container">
+        <div class="corner-design top-left"></div>
+        <div class="corner-design top-right"></div>
+        <div class="corner-design bottom-left"></div>
+        <div class="corner-design bottom-right"></div>
+        
+        <div class="watermark">
+            <span id="watermarkText">16 18 19 3</span>
+        </div>
+
+        <div class="lang-selector">
+            <button class="lang-btn active" onclick="changeLang('en')">EN</button>
+            <button class="lang-btn" onclick="changeLang('ur')">اردو</button>
+            <button class="lang-btn" onclick="changeLang('pn')">پنجابی</button>
+            <button class="lang-btn" onclick="changeLang('sr')">سرائیکی</button>
+        </div>
+
+        <!-- English Content -->
+        <div class="content active" id="en-content">
+            <div class="bismillah">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</div>
+            <div class="title">Walima Invitation</div>
+            <div class="divider">
+                <div class="divider-dot"></div>
+            </div>
+            <div class="grace-text">With the grace of Almighty Allah,</div>
+            <div class="invitation-text">We cordially invite you to the Walima ceremony of</div>
+            <div class="groom-name">Husnain Sardar</div>
+            <div class="divider">
+                <div class="divider-dot"></div>
+            </div>
+            
+            <div class="countdown" id="countdown-en"></div>
+
+            <div class="details">
+                <div class="detail-item"><span class="detail-label">on</span> 17th November 2025</div>
+                <div class="detail-item"><span class="detail-label">Time:</span> 2:00 PM</div>
+                <div class="detail-item"><span class="detail-label">Venue:</span> At Home</div>
+            </div>
+
+            <div class="honored-text">We would be deeply honored and grateful for your presence.</div>
+
+            <a href="https://www.google.com/maps/dir/31.4593493,74.2763124/29.7927226,71.4443386/@30.599353,70.2194335,7z/data=!3m1!4b1!4m6!4m5!1m1!4e1!1m1!4e1!3e9?entry=ttu&g_ep=EgoyMDI1MTAyOC4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="map-btn">
+                📍 View on Map
+            </a>
+        </div>
+
+        <!-- Urdu Content -->
+        <div class="content" id="ur-content" dir="rtl">
+            <div class="bismillah">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</div>
+            <div class="title">ولیمہ کی دعوت</div>
+            <div class="divider">
+                <div class="divider-dot"></div>
+            </div>
+            <div class="grace-text">اللہ تعالیٰ کے فضل و کرم سے،</div>
+            <div class="invitation-text">آپ کو پُر تپاک ولیمہ کی تقریب میں مدعو کیا جاتا ہے</div>
+            <div class="groom-name">حسنین سردار</div>
+            <div class="divider">
+                <div class="divider-dot"></div>
+            </div>
+            
+            <div class="countdown" id="countdown-ur"></div>
+
+            <div class="details">
+                <div class="detail-item">17 نومبر 2025 <span class="detail-label">بروز</span></div>
+                <div class="detail-item">دوپہر 2 بجے <span class="detail-label">وقت:</span></div>
+                <div class="detail-item">گھر پر <span class="detail-label">مقام:</span></div>
+            </div>
+
+            <div class="honored-text">آپ کی موجودگی ہمارے لیے باعث عزت و فخر ہوگی۔</div>
+
+            <a href="https://www.google.com/maps/dir/31.4593493,74.2763124/29.7927226,71.4443386/@30.599353,70.2194335,7z/data=!3m1!4b1!4m6!4m5!1m1!4e1!1m1!4e1!3e9?entry=ttu&g_ep=EgoyMDI1MTAyOC4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="map-btn">
+                📍 نقشے پر دیکھیں
+            </a>
+        </div>
+
+        <!-- Punjabi Content -->
+        <div class="content" id="pn-content" dir="rtl">
+            <div class="bismillah">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</div>
+            <div class="title">ولیمے دی دعوت</div>
+            <div class="divider">
+                <div class="divider-dot"></div>
+            </div>
+            <div class="grace-text">اللہ تعالیٰ دے فضل تے کرم نال،</div>
+            <div class="invitation-text">تہانوں پیار نال ولیمے دی تقریب وچ سدا دتا جاندا اے</div>
+            <div class="groom-name">حسنین سردار</div>
+            <div class="divider">
+                <div class="divider-dot"></div>
+            </div>
+            
+            <div class="countdown" id="countdown-pn"></div>
+
+            <div class="details">
+                <div class="detail-item">17 نومبر 2025 <span class="detail-label">تاریخ:</span></div>
+                <div class="detail-item">دوپہر 2 وجے <span class="detail-label">ویلہ:</span></div>
+                <div class="detail-item">گھر تے <span class="detail-label">تھاں:</span></div>
+            </div>
+
+            <div class="honored-text">تہاڈی موجودگی ساڈے لئی عزت تے خوشی دی گل ہووےگی۔</div>
+
+            <a href="https://www.google.com/maps/dir/31.4593493,74.2763124/29.7927226,71.4443386/@30.599353,70.2194335,7z/data=!3m1!4b1!4m6!4m5!1m1!4e1!1m1!4e1!3e9?entry=ttu&g_ep=EgoyMDI1MTAyOC4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="map-btn">
+                📍 نقشے تے ویکھو
+            </a>
+        </div>
+
+        <!-- Saraiki Content -->
+        <div class="content" id="sr-content" dir="rtl">
+            <div class="bismillah">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</div>
+            <div class="title">ولیمے دی دعوت</div>
+            <div class="divider">
+                <div class="divider-dot"></div>
+            </div>
+            <div class="grace-text">اللہ پاک دے فضل تے کرم نال،</div>
+            <div class="invitation-text">تہاکوں پیار نال ولیمے دی تقریب وچ سدا دتا ویندا</div>
+            <div class="groom-name">حسنین سردار</div>
+            <div class="divider">
+                <div class="divider-dot"></div>
+            </div>
+            
+            <div class="countdown" id="countdown-sr"></div>
+
+            <div class="details">
+                <div class="detail-item">17 نومبر 2025 <span class="detail-label">تاریخ:</span></div>
+                <div class="detail-item">دوپہر 2 وڄے <span class="detail-label">ویلھا:</span></div>
+                <div class="detail-item">گھر تے <span class="detail-label">جاء:</span></div>
+            </div>
+
+            <div class="honored-text">تہاݙی موجودگی ساݙے لئی عزت تے خوشی دی گل ہوسی۔</div>
+
+            <a href="https://www.google.com/maps/dir/31.4593493,74.2763124/29.7927226,71.4443386/@30.599353,70.2194335,7z/data=!3m1!4b1!4m6!4m5!1m1!4e1!1m1!4e1!3e9?entry=ttu&g_ep=EgoyMDI1MTAyOC4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="map-btn">
+                📍 نقشے تے ݙیکھو
+            </a>
+        </div>
     </div>
 
-    <!-- Hero Section -->
-    <section class="hero-section">
-        <div class="hero-background"></div>
-        <div class="gold-particles">
-            <div class="particle" style="left: 10%; width: 4px; height: 4px; animation-delay: 0s;"></div>
-            <div class="particle" style="left: 20%; width: 6px; height: 6px; animation-delay: 3s;"></div>
-            <div class="particle" style="left: 30%; width: 3px; height: 3px; animation-delay: 6s;"></div>
-            <div class="particle" style="left: 40%; width: 5px; height: 5px; animation-delay: 2s;"></div>
-            <div class="particle" style="left: 50%; width: 4px; height: 4px; animation-delay: 8s;"></div>
-            <div class="particle" style="left: 60%; width: 6px; height: 6px; animation-delay: 4s;"></div>
-            <div class="particle" style="left: 70%; width: 3px; height: 3px; animation-delay: 7s;"></div>
-            <div class="particle" style="left: 80%; width: 5px; height: 5px; animation-delay: 1s;"></div>
-            <div class="particle" style="left: 90%; width: 4px; height: 4px; animation-delay: 5s;"></div>
-        </div>
-
-        <div class="hero-content">
-            <div class="ornament-divider"></div>
-            
-            <div class="english-content">
-                <div class="wedding-title">The Wedding Celebration of</div>
-                <div class="couple-names">
-                    Husnain
-                    <span class="ampersand">&</span>
-                    Zunaira
-                </div>
-                <div class="tagline">Together Forever • November 2025</div>
-            </div>
-
-            <div class="urdu-content hidden">
-                <div class="wedding-title urdu-text urdu-title">شادی کی تقریب</div>
-                <div class="couple-names urdu-text urdu-names">
-                    حسنین
-                    <span class="ampersand">&</span>
-                    زنیرہ
-                </div>
-                <div class="tagline urdu-text urdu-tagline">ہمیشہ کے لیے ساتھ • نومبر 2025</div>
-            </div>
-
-            <div class="ornament-divider"></div>
-        </div>
-    </section>
-
-    <!-- Events Section -->
-    <section class="events-section">
-        <div class="container">
-            <div class="english-content">
-                <h2 class="section-title">Wedding Events</h2>
-                <p class="section-subtitle">JOIN US IN OUR CELEBRATION</p>
-            </div>
-            <div class="urdu-content hidden">
-                <h2 class="section-title urdu-text urdu-section-title">شادی کی تقریبات</h2>
-                <p class="section-subtitle urdu-text urdu-subtitle">ہماری خوشی میں شریک ہوں</p>
-            </div>
-
-            <div class="events-grid">
-                <!-- Mehdi Event -->
-                <div class="event-card">
-                    <div class="event-card-header">
-                        <div class="event-icon">🎨</div>
-                        <div class="english-content">
-                            <h3 class="event-name">Mehdi</h3>
-                        </div>
-                        <div class="urdu-content hidden">
-                            <h3 class="event-name urdu-text urdu-event-name">مہندی</h3>
-                        </div>
-                    </div>
-                    <div class="event-card-body">
-                        <div class="english-content">
-                            <div class="event-detail-row">
-                                <span class="event-detail-label">Date:</span>
-                                <span class="event-detail-value">14 November 2025</span>
-                            </div>
-                            <div class="event-detail-row">
-                                <span class="event-detail-label">Time:</span>
-                                <span class="event-detail-value">8:00 PM</span>
-                            </div>
-                            <div class="event-detail-row">
-                                <span class="event-detail-label">Venue:</span>
-                                <span class="event-detail-value">Home</span>
-                            </div>
-                        </div>
-                        <div class="urdu-content hidden">
-                            <div class="event-detail-row urdu-text urdu-event-detail">
-                                <span class="event-detail-value">14 نومبر 2025</span>
-                                <span class="event-detail-label">:تاریخ</span>
-                            </div>
-                            <div class="event-detail-row urdu-text urdu-event-detail">
-                                <span class="event-detail-value">رات 8 بجے</span>
-                                <span class="event-detail-label">:وقت</span>
-                            </div>
-                            <div class="event-detail-row urdu-text urdu-event-detail">
-                                <span class="event-detail-value">گھر</span>
-                                <span class="event-detail-label">:جگہ</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="event-card-footer">
-                        <div class="event-decoration"></div>
-                    </div>
-                </div>
-
-                <!-- Sehra Bandi Event -->
-                <div class="event-card">
-                    <div class="event-card-header">
-                        <div class="event-icon">👑</div>
-                        <div class="english-content">
-                            <h3 class="event-name">Sehra Bandi</h3>
-                        </div>
-                        <div class="urdu-content hidden">
-                            <h3 class="event-name urdu-text urdu-event-name">سہرا بندی</h3>
-                        </div>
-                    </div>
-                    <div class="event-card-body">
-                        <div class="english-content">
-                            <div class="event-detail-row">
-                                <span class="event-detail-label">Date:</span>
-                                <span class="event-detail-value">15 November 2025</span>
-                            </div>
-                            <div class="event-detail-row">
-                                <span class="event-detail-label">Time:</span>
-                                <span class="event-detail-value">4:00 PM</span>
-                            </div>
-                            <div class="event-detail-row">
-                                <span class="event-detail-label">Venue:</span>
-                                <span class="event-detail-value">Home</span>
-                            </div>
-                        </div>
-                        <div class="urdu-content hidden">
-                            <div class="event-detail-row urdu-text urdu-event-detail">
-                                <span class="event-detail-value">15 نومبر 2025</span>
-                                <span class="event-detail-label">:تاریخ</span>
-                            </div>
-                            <div class="event-detail-row urdu-text urdu-event-detail">
-                                <span class="event-detail-value">شام 4 بجے</span>
-                                <span class="event-detail-label">:وقت</span>
-                            </div>
-                            <div class="event-detail-row urdu-text urdu-event-detail">
-                                <span class="event-detail-value">گھر</span>
-                                <span class="event-detail-label">:جگہ</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="event-card-footer">
-                        <div class="event-decoration"></div>
-                    </div>
-                </div>
-
-                <!-- Barat Event -->
-                <div class="event-card">
-                    <div class="event-card-header">
-                        <div class="event-icon">💍</div>
-                        <div class="english-content">
-                            <h3 class="event-name">Barat</h3>
-                        </div>
-                        <div class="urdu-content hidden">
-                            <h3 class="event-name urdu-text urdu-event-name">بارات</h3>
-                        </div>
-                    </div>
-                    <div class="event-card-body">
-                        <div class="english-content">
-                            <div class="event-detail-row">
-                                <span class="event-detail-label">Date:</span>
-                                <span class="event-detail-value">16 November 2025</span>
-                            </div>
-                            <div class="event-detail-row">
-                                <span class="event-detail-label">Time:</span>
-                                <span class="event-detail-value">TBA</span>
-                            </div>
-                            <div class="event-detail-row">
-                                <span class="event-detail-label">Details:</span>
-                                <span class="event-detail-value">Main Wedding Ceremony</span>
-                            </div>
-                        </div>
-                        <div class="urdu-content hidden">
-                            <div class="event-detail-row urdu-text urdu-event-detail">
-                                <span class="event-detail-value">16 نومبر 2025</span>
-                                <span class="event-detail-label">:تاریخ</span>
-                            </div>
-                            <div class="event-detail-row urdu-text urdu-event-detail">
-                                <span class="event-detail-value">بعد میں اطلاع</span>
-                                <span class="event-detail-label">:وقت</span>
-                            </div>
-                            <div class="event-detail-row urdu-text urdu-event-detail">
-                                <span class="event-detail-value">مرکزی شادی کی تقریب</span>
-                                <span class="event-detail-label">:تفصیل</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="event-card-footer">
-                        <div class="event-decoration"></div>
-                    </div>
-                </div>
-
-                <!-- Valima Event -->
-                <div class="event-card">
-                    <div class="event-card-header">
-                        <div class="event-icon">🎉</div>
-                        <div class="english-content">
-                            <h3 class="event-name">Valima</h3>
-                        </div>
-                        <div class="urdu-content hidden">
-                            <h3 class="event-name urdu-text urdu-event-name">ولیمہ</h3>
-                        </div>
-                    </div>
-                    <div class="event-card-body">
-                        <div class="english-content">
-                            <div class="event-detail-row">
-                                <span class="event-detail-label">Date:</span>
-                                <span class="event-detail-value">17 November 2025</span>
-                            </div>
-                            <div class="event-detail-row">
-                                <span class="event-detail-label">Time:</span>
-                                <span class="event-detail-value">1:00 PM</span>
-                            </div>
-                            <div class="event-detail-row">
-                                <span class="event-detail-label">Venue:</span>
-                                <span class="event-detail-value">Home</span>
-                            </div>
-                        </div>
-                        <div class="urdu-content hidden">
-                            <div class="event-detail-row urdu-text urdu-event-detail">
-                                <span class="event-detail-value">17 نومبر 2025</span>
-                                <span class="event-detail-label">:تاریخ</span>
-                            </div>
-                            <div class="event-detail-row urdu-text urdu-event-detail">
-                                <span class="event-detail-value">دوپہر 1 بجے</span>
-                                <span class="event-detail-label">:وقت</span>
-                            </div>
-                            <div class="event-detail-row urdu-text urdu-event-detail">
-                                <span class="event-detail-value">گھر</span>
-                                <span class="event-detail-label">:جگہ</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="event-card-footer">
-                        <div class="event-decoration"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Map Section -->
-    <section class="map-section">
-        <div class="container">
-            <div class="map-container">
-                <div class="english-content">
-                    <h2 class="map-title">Venue Location</h2>
-                    <p class="map-subtitle">Find us on the map</p>
-                </div>
-                <div class="urdu-content hidden">
-                    <h2 class="map-title urdu-text urdu-map-title">تقریب کی جگہ</h2>
-                    <p class="map-subtitle urdu-text urdu-map-subtitle">نقشے پر ہمیں تلاش کریں</p>
-                </div>
-                
-                <iframe 
-                    class="map-frame"
-                    src="https://maps.google.com/maps?q=31.5289,74.3426&output=embed"
-                    allowfullscreen=""
-                    loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade">
-                </iframe>
-
-                <div class="english-content">
-                    <a href="https://maps.app.goo.gl/yFg41qfn7VxSGPvi9" target="_blank" class="map-link-button">
-                        📍 Open in Google Maps
-                    </a>
-                </div>
-                <div class="urdu-content hidden">
-                    <a href="https://maps.app.goo.gl/yFg41qfn7VxSGPvi9" target="_blank" class="map-link-button">
-                        📍 گوگل میپس میں کھولیں
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-content">
-            <div class="ornament-divider" style="margin-bottom: 30px;"></div>
-            
-            <div class="english-content">
-                <h3 class="footer-message">Thank You for Celebrating With Us!</h3>
-                <p class="footer-text">Your presence means the world to us</p>
-                <p class="footer-text" style="margin-top: 30px; opacity: 0.7;">Husnain & Zunaira • November 2025</p>
-            </div>
-            <div class="urdu-content hidden">
-                <h3 class="footer-message urdu-text urdu-footer-message">ہمارے ساتھ جشن منانے کا شکریہ!</h3>
-                <p class="footer-text urdu-text urdu-footer-text">آپ کی موجودگی ہمارے لیے بہت اہمیت رکھتی ہے</p>
-                <p class="footer-text urdu-text urdu-footer-text" style="margin-top: 30px; opacity: 0.7;">حسنین اور زنیرہ • نومبر 2025</p>
-            </div>
-            
-            <div class="ornament-divider" style="margin-top: 30px;"></div>
-        </div>
-    </footer>
-
     <script>
-        let isUrdu = false;
+        const weddingDate = new Date('2025-11-17T14:00:00').getTime();
 
-        function toggleLanguage() {
-            isUrdu = !isUrdu;
-            const englishElements = document.querySelectorAll('.english-content');
-            const urduElements = document.querySelectorAll('.urdu-content');
-            const langBtn = document.getElementById('langBtn');
+        const labels = {
+            en: { days: 'Days', hours: 'Hours', minutes: 'Minutes', seconds: 'Seconds' },
+            ur: { days: 'دن', hours: 'گھنٹے', minutes: 'منٹ', seconds: 'سیکنڈ' },
+            pn: { days: 'دن', hours: 'گھنٹے', minutes: 'منٹ', seconds: 'سیکنڈ' },
+            sr: { days: 'دن', hours: 'گھنٹے', minutes: 'منٹ', seconds: 'سیکنڈ' }
+        };
 
-            if (isUrdu) {
-                englishElements.forEach(el => el.classList.add('hidden'));
-                urduElements.forEach(el => el.classList.remove('hidden'));
-                langBtn.textContent = 'English';
-            } else {
-                englishElements.forEach(el => el.classList.remove('hidden'));
-                urduElements.forEach(el => el.classList.add('hidden'));
-                langBtn.textContent = 'اردو';
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const distance = weddingDate - now;
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            ['en', 'ur', 'pn', 'sr'].forEach(lang => {
+                const container = document.getElementById(`countdown-${lang}`);
+                if (container) {
+                    container.innerHTML = `
+                        <div class="countdown-item">
+                            <span class="countdown-value">${days}</span>
+                            <span class="countdown-label">${labels[lang].days}</span>
+                        </div>
+                        <div class="countdown-item">
+                            <span class="countdown-value">${hours}</span>
+                            <span class="countdown-label">${labels[lang].hours}</span>
+                        </div>
+                        <div class="countdown-item">
+                            <span class="countdown-value">${minutes}</span>
+                            <span class="countdown-label">${labels[lang].minutes}</span>
+                        </div>
+                        <div class="countdown-item">
+                            <span class="countdown-value">${seconds}</span>
+                            <span class="countdown-label">${labels[lang].seconds}</span>
+                        </div>
+                    `;
+                }
+            });
+
+            if (distance < 0) {
+                ['en', 'ur', 'pn', 'sr'].forEach(lang => {
+                    const container = document.getElementById(`countdown-${lang}`);
+                    if (container) {
+                        container.innerHTML = '<div class="honored-text">The celebration has begun! 🎉</div>';
+                    }
+                });
             }
         }
 
-        // Smooth scroll behavior
-        document.addEventListener('DOMContentLoaded', function() {
-            const links = document.querySelectorAll('a[href^="#"]');
-            links.forEach(link => {
-                link.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    const target = document.querySelector(this.getAttribute('href'));
-                    if (target) {
-                        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                    }
-                });
-            });
-        });
+        function changeLang(lang) {
+            document.querySelectorAll('.content').forEach(c => c.classList.remove('active'));
+            document.getElementById(`${lang}-content`).classList.add('active');
+            
+            document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+        }
+
+        updateCountdown();
+        setInterval(updateCountdown, 1000);
     </script>
 </body>
 </html>
